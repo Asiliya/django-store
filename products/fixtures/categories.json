@@ -1,0 +1,50 @@
+[
+{
+  "model": "products.productcategory",
+  "pk": 1,
+  "fields": {
+    "name": "Одяг",
+    "description": "Одяг"
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Взуття",
+    "description": "Взуття"
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 3,
+  "fields": {
+    "name": "Аксесуари",
+    "description": "Аксесуари"
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 4,
+  "fields": {
+    "name": "Новинки",
+    "description": "Новинки"
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 5,
+  "fields": {
+    "name": "Він",
+    "description": "Чоловічий одяг"
+  }
+},
+{
+  "model": "products.productcategory",
+  "pk": 6,
+  "fields": {
+    "name": "Вона",
+    "description": "Жіночий одяг"
+  }
+}
+]

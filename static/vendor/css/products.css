@@ -1,0 +1,47 @@
+body {
+    padding-top: 56px;
+}
+
+
+.search-form-container {
+    display: flex;                       /* Використовуємо flexbox для вирівнювання */
+    justify-content: center;             /* Центруємо по горизонталі */
+    align-items: center;                 /* Центруємо по вертикалі */
+    margin: 10px;                       /* Додаємо відступи навколо контейнера */
+}
+
+.search-form-container form {
+    display: flex;                       /* Використовуємо flexbox для форми */
+    align-items: center;                 /* Центруємо елементи форми по вертикалі */
+}
+
+.search-form-container input[type="text"] {
+    width: 1000px;                       /* Задаємо ширину пошукового поля */
+    padding: 10px;                     /* Додаємо внутрішні відступи */
+    border: 2px solid #ccc;            /* Задаємо рамку */
+    border-radius: 15px;               /* Заокруглюємо кути */
+    font-size: 16px;                   /* Задаємо розмір шрифту */
+    transition: border-color 0.3s;     /* Додаємо анімацію при фокусуванні */
+}
+
+.search-form-container input[type="text"]:focus {
+    border-color: #000000;             /* Змінюємо колір рамки при фокусуванні */
+    outline: none;                     /* Вимикаємо стандартний контур */
+}
+
+.search-form-container button {
+    padding: 10px 20px;                /* Додаємо внутрішні відступи для кнопки */
+    background-color: #000000;         /* Колір фону кнопки */
+    color: white;                       /* Колір тексту кнопки */
+    border: none;                      /* Вимикаємо стандартну рамку */
+    border-radius: 15px;               /* Заокруглюємо кути кнопки */
+    font-size: 16px;                   /* Задаємо розмір шрифту для кнопки */
+    cursor: pointer;                    /* Змінюємо курсор при наведенні */
+    transition: background-color 0.3s; /* Додаємо анімацію при наведенні */
+    margin-left: 10px;                 /* Додаємо відступ зліва */
+    margin-top: -15px
+}
+
+.search-form-container button:hover {
+    background-color: #000000;         /* Змінюємо колір фону кнопки при наведенні */
+}

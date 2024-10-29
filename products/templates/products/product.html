@@ -1,0 +1,64 @@
+{% extends 'products/base.html' %}
+{% load static %}
+
+{% block css %}
+<link href="{% static 'vendor/css/product.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="product">
+        <div class="product-info">
+            <div class="product-image-container">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+            </div>
+            <div class="product-details">
+                <h1 class="product-name">{{ product.name }}</h1>
+                <p class="product-description">{{ product.description }}</p>
+                <p class="product-price">{{ product.price }} грн.</p>
+                <a class="add-to-cart" href="{% url 'products:basket_add' product.id %}">
+                                Додати до кошика
+                </a>
+            </div>
+        </div>
+        <div class="reviews">
+            <h2>Відгуки</h2>
+            <div class="review">
+                {% for review in reviews %}
+                <div class="review-item">
+                    <div class="user-image-container">
+                        <img src="{{ review.user.image.url }}" alt="{{ user.username }}" class="user-image">
+                    </div>
+                    <div class="review-content">
+                    <p class="review-author">{{ review.user.username }}</p>
+                    <p class="review-text">{{ review.comment }}</p>
+                     {% if review.user == request.user %}
+                        <form method="post" action="{% url 'products:delete_review' review.id %}" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Видалити</button>
+                        </form>
+                    {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                <p class="review-author">Ім'я користувача</p>
+                <p class="review-text">Це приклад відгуку. Дуже сподобався товар!</p>
+
+            </div>
+            <form method="post" action="{% url 'products:add_review' product.id %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Додати відгук</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer class="py-5 bg-dark">
+    <div class="container">
+        <p class="m-0 text-center text-white"><a href="https://puet.edu.ua/" class="text-white">PUET</a> &copy; Дипломна робота 2024</p>
+    </div>
+</footer>
+{% endblock %}

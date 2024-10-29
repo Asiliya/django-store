@@ -1,0 +1,38 @@
+{% extends 'products/base.html' %}
+{% load humanize %}
+
+{% block content %}
+<section>
+    <div class="container pt-5">
+        <div class="text-center mt-5">
+            <h1>Заказы</h1>
+            <div class="orders mt-5">
+                <table class="table">
+                    <thead>
+                    <tr class="table-light">
+                        <th scope="col">#</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Створено</th>
+                        <th scope="col">Результат</th>
+                        <th scope="col">Дія</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in orders %}
+                        <tr class="table-success">
+                        <th scope="row">{{ order.id }}</th>
+                        <td>{{ order.get_status_display }}</td>
+                        <td>{{ order.created|naturaltime }}</td>
+                        <td>{{ order.basket_history.total_sum }} грн.</td>
+                        <td>
+                            <a href="{% url 'orders:order' order.id %}">Переглянути</a>
+                        </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

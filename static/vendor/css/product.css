@@ -1,0 +1,158 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-image-container {
+    flex: 1;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.product-details {
+    flex: 2;
+    text-align: left;
+}
+
+.product-name {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.add-to-cart {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+.reviews {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+.reviews h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.review-author {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #666;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button.btn.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+button.btn.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.user-image-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.review-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn.btn-danger {
+    font-size: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
