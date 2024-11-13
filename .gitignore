@@ -3,5 +3,4 @@ __pycache__/
 .idea/
 *.log
 *.env
-store/settings.py
 db.sqlite3
