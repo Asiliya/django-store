@@ -3,4 +3,5 @@ __pycache__/
 .idea/
 *.log
 *.env
+envexample.txt
 db.sqlite3
